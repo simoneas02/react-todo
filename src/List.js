@@ -11,23 +11,36 @@ class List extends Component {
   addItem() {
     const newText = this.refs.text;
     const itemList = this.state.list;
-
-    if(newText.value !== "") {
-      itemList.push(
-        {
-          text: newText.value
-        }
-      );
+    const index = itemList.length + 1;
+     
+      if(newText.value !== "") {
+        itemList.push(
+          {
+            id: index,
+            text: newText.value
+          }
+        );
     };
 
     this.setState({ list: itemList });
     newText.value = ""
   };
+
+  removeItem(id) {
+    const itemList = this.state.list.filter((item) => {
+      return item.id !== id;
+    });
+
+    this.setState({ list: itemList });
+  };
  
   render() {
     const itemList = this.state.list.map((item)  => {
       return (
-        <li>{ item.text }</li>
+        <li>
+          { item.text } 
+          <button onClick={ this.removeItem.bind(this, item.id) }>x</button>
+        </li>
       );
     });
 
