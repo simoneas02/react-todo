@@ -12,13 +12,12 @@ class List extends Component {
   addItem() {
     const newText = this.refs.text;
     const itemList = this.state.list;
-    const isEditable = this.state.isEditable;
-    const index = itemList.length + 1;
+    const id = itemList.length + 1;
      
       if(newText.value !== "") {
         itemList.push(
           {
-            id: index,
+            id: id,
             text: newText.value,
             isEditable: false
           }
@@ -48,45 +47,65 @@ class List extends Component {
           }
         )
       } else {
-        return (
+        return item
+      }
+    });
+
+    this.setState({ list: itemList} );
+  }
+
+  updateItem(id, e) {
+    e.preventDefault();
+
+    const itemList = this.state.list.map((item) => {
+
+      if(item.id === id) {
+        return ({
+          isEditable: true,
+          id: item.id,
+          text: e.target.value
+        })
+        } else {
+          return item
+        }
+     })
+
+    this.setState({ list: itemList})
+  };
+
+  saveItem(id) {
+    const itemList = this.state.list.map((item) => {
+
+      if(item.id === id) {
+        return(
           {
             isEditable: false,
             id: item.id,
             text: item.text
           }
-        )
+        ) 
+      } else {
+        return item
       }
     });
-    this.setState({ list: itemList} );
-  }
 
-  updateItem(id) {
-    const value = this.refs[id];
-
-    const itemList = this.state.list;
-
-
- };
-
-  saveItem(id) {
-
-  }
+    this.setState({ list: itemList })
+  };
 
   render() {
     const itemList = this.state.list.map((item)  => {
       if(item.isEditable) {
         return (
-            <li>
+            <li key={item.id}>
               <input type="text"
-                ref={ item.id }
-                value={ item.text }
+                value={ item.text } 
                 onChange={ this.updateItem.bind(this, item.id) }/>
                 <button onClick={ this.saveItem.bind(this, item.id) }>SAVE</button>
             </li>
           )
       } else {
         return (
-          <li>
+          <li key={item.id}>
               { item.text } 
               <button onClick={ this.removeItem.bind(this, item.id) }>DELETE</button>
               <button onClick={ this.editItem.bind(this, item.id) }>EDITE</button>
@@ -97,8 +116,6 @@ class List extends Component {
 
     return (
       <div>
-        <h1>TO DO List</h1>
-
         <div>
           <input type="text" ref="text"/>
           <button onClick={ this.addItem.bind(this) }>ADD</button>
