@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf, action, linkTo } from '@kadira/storybook';
-import List from '../List';
+import App from '../components/App';
 
-storiesOf('List', module)
+storiesOf('App', module)
   .add('title', () => (
-    <List />
+    <App />
   ));
