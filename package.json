@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "immutability-helper": "^2.3.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
