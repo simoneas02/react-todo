@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GithubCorner from 'react-github-corner'
-import logo from '../assets/icons/logo.svg';
+import logoReact from '../assets/icons/logo-react.svg';
+import logoRedux from '../assets/icons/logo-redux.svg';
 import '../assets/css/header.css';
 
 class Header extends Component {
@@ -9,10 +10,13 @@ class Header extends Component {
 
     return (
       <header className="header">
-        <img src={logo} className="header__logo" alt="logo" />
-        <h1 className="header__title">TODO List</h1>
+        <div className="section">
+          <img src={logoReact} className="section__logo" alt="logo react" />
+          <span className="section__plus">+</span>
+          <img src={logoRedux} className="section__logo" alt="logo redux" />
+        </div>
 
-        <GithubCorner octoColor='#212121' bannerColor='#61DAFB' href="https://github.com/simoneas02/react-todo" />
+        <GithubCorner octoColor='var(--secondary-color)' bannerColor='var(--primary-color)' href="https://github.com/simoneas02/react-todo" />
       </header>
     )
 
