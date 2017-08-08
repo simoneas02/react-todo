@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+
+    width: 100vw;
+    padding: 50px;
+
+    background-color: #222;
+    border-top: 5px solid #61DAFB;
+    color: white;
+}
+
+.header__logo {
+    animation: header__logo--spin infinite 20s linear;
+    height: 80px;
+    padding-left: 20px;
+}
+
+@keyframes header__logo--spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

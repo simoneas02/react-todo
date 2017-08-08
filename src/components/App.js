@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
+import Header from './Header';
 import AddItem from './AddItem'
 import List from './List';
+import Footer from './Footer';
+import '../assets/css/app.css';
 
 class App extends Component {
 
   render () {
 
     return (
+      <div className="app">
 
-      <div>
+        <Header />
 
-        <header>
-          <h1>TODO List</h1>
-        </header>
+        <main className='main'>
 
-        <AddItem data = {this.props.state} store = {this.props.store} />
+          <AddItem data = {this.props.state} store = {this.props.store} />
 
-        <List data = {this.props.state} store = {this.props.store} />
+          <List data = {this.props.state} store = {this.props.store} />
 
+        </main>
+
+        <Footer />
+        
       </div>
-
     )
   }
 }

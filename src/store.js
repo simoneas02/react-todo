@@ -73,6 +73,12 @@ const reducer = (state, action) => {
 
 };
 
-const store = createStore(reducer, [{id: 1, text:'React'}, {id: 2, text:'and'}, {id: 3, text:'Redux'}]);
+const store = createStore(
+                reducer, 
+                    [
+                        {id: 1, text:'React'}, 
+                        {id: 2, text:'and'}, 
+                        {id: 3, text:'Redux'}
+                    ]);
 
 export default store;
