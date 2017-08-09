@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import Button from './Button';
+import iconEdit from '../assets/icons/icon-edit.svg';
+import iconDelete from '../assets/icons/icon-delete.svg';
+import iconSave from '../assets/icons/icon-save.svg';
 
 class List extends Component {
 
@@ -33,7 +37,11 @@ class List extends Component {
                    value = {item.text} 
                    onChange = {() => this.updateItem(item.id)} />
 
-            <button onClick = {() => this.saveItem(item.id)}>SAVE</button>
+            <Button
+              onClick = {() => this.saveItem(item.id)}
+              icon = {iconSave}>
+              SAVE
+            </Button>
           </li>
 
         )
@@ -44,8 +52,18 @@ class List extends Component {
 
           <li key={item.id}>
             {item.text} 
-            <button onClick = {() => this.removeItem(item.id)}>DELETE</button>
-            <button onClick ={() => this.editItem(item.id) }>EDITE</button>
+            
+            <Button
+              onClick = {() => this.removeItem(item.id)}
+              icon = {iconDelete}>
+              DELETE
+            </Button>
+
+            <Button
+              onClick = {() => this.editItem(item.id)}
+              icon = {iconEdit}>
+              EDIT
+            </Button>
           </li>
 
         )

@@ -16,7 +16,7 @@ class Header extends Component {
           <img src={logoRedux} className="section__logo" alt="logo redux" />
         </div>
 
-        <GithubCorner octoColor='var(--secondary-color)' bannerColor='var(--primary-color)' href="https://github.com/simoneas02/react-todo" />
+        <GithubCorner octoColor='var(--bg-color)' bannerColor='var(--primary-color)' href="https://github.com/simoneas02/react-todo" />
       </header>
     )
 

@@ -4,7 +4,7 @@
 
     color: white;
     border-top: 5px solid var(--primary-color);
-    background-color: var(--secondary-color);
+    background-color: var(--bg-color);
 }
 
 @media(max-width: 480px) {

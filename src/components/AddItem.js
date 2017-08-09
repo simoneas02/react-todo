@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Button from './Button';
+import iconAdd from '../assets/icons/icon-add.svg';
 import '../assets/css/add-item.css';
 
 class AddItem extends Component {
@@ -26,8 +28,12 @@ class AddItem extends Component {
     return (
 
         <div className = 'add-item'>
-            <input type="text" ref="text"/>
-            <button onClick={() => this.addItem()}>ADD</button>
+            <input type = "text" ref="text"/>
+            <Button
+              onClick = {() => this.addItem()}
+              icon = {iconAdd}>
+              ADD
+            </Button>
         </div>
 
     )
