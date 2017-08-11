@@ -2,24 +2,23 @@
     font-size: 12px;
     font-weight: 400;
 
-    display: inline-block;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 
-    margin: 0 2px;
+    margin-left: 2px;
     padding: 10px;
 
     color: #fff;
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 3px;
-    background-color: #764ABC;
+    background-color: var(--secondary-color);
 }
 
 .btn:hover {
     cursor: pointer;
 
-    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.1));
+    background: #450ba2;
 }
 
 .btn:active {
@@ -42,9 +41,6 @@
 
 .btn__icon {
     width: 15px;
-    margin-left: 5px;
 
     background: var(--secondary-color);
-
-    vertical-align: middle;
 }

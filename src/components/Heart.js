@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import '../assets/css/heart.css'
+import '../assets/style/heart.css'
 
 class Heart extends Component {
   render() {

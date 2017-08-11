@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from './Button';
 import iconAdd from '../assets/icons/icon-add.svg';
-import '../assets/css/add-item.css';
+import '../assets/style/add-item.css';
 
 class AddItem extends Component {
 
@@ -28,11 +28,10 @@ class AddItem extends Component {
     return (
 
         <div className = 'add-item'>
-            <input type = "text" ref="text"/>
+            <input className = 'add-item__input' type = "text" ref="text"/>
             <Button
               onClick = {() => this.addItem()}
               icon = {iconAdd}>
-              ADD
             </Button>
         </div>
 

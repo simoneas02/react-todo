@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GithubCorner from 'react-github-corner'
 import logoReact from '../assets/icons/logo-react.svg';
 import logoRedux from '../assets/icons/logo-redux.svg';
-import '../assets/css/header.css';
+import '../assets/style/header.css';
 
 class Header extends Component {
 

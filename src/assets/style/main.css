@@ -6,5 +6,5 @@
 
     width: 100%;
 
-    background: linear-gradient(to bottom,  var(--primary-color) 50%, rgba(183,222,237,1));
+    background: var(--bg-color);
 }

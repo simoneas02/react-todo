@@ -3,8 +3,9 @@ import Button from './Button';
 import iconEdit from '../assets/icons/icon-edit.svg';
 import iconDelete from '../assets/icons/icon-delete.svg';
 import iconSave from '../assets/icons/icon-save.svg';
+import '../assets/style/list-item.css';
 
-class List extends Component {
+class ListItem extends Component {
 
   removeItem(id) {
     this.props.store.dispatch({type: 'DELETE', id: id});
@@ -31,8 +32,8 @@ class List extends Component {
         
         return (
 
-          <li key = {item.id}>
-            <input type = 'text' 
+          <li className = 'list__edit' key = {item.id}>
+            <input className = 'list__edit__text' type = 'text' 
                    ref = 'text'
                    value = {item.text} 
                    onChange = {() => this.updateItem(item.id)} />
@@ -40,7 +41,6 @@ class List extends Component {
             <Button
               onClick = {() => this.saveItem(item.id)}
               icon = {iconSave}>
-              SAVE
             </Button>
           </li>
 
@@ -50,20 +50,22 @@ class List extends Component {
         
         return (
 
-          <li key={item.id}>
-            {item.text} 
+          <li className = 'list__item' key={item.id}>
+            <div>
+              {item.text}
+            </div> 
             
-            <Button
+            <div>
+              <Button
               onClick = {() => this.removeItem(item.id)}
               icon = {iconDelete}>
-              DELETE
             </Button>
 
             <Button
               onClick = {() => this.editItem(item.id)}
               icon = {iconEdit}>
-              EDIT
             </Button>
+            </div>
           </li>
 
         )
@@ -72,7 +74,7 @@ class List extends Component {
 
     return (
 
-      <ul>
+      <ul className = 'list'>
         {itemList}
       </ul>
 
@@ -80,4 +82,4 @@ class List extends Component {
   };
 };
 
-export default List;
+export default ListItem;

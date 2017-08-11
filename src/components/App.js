@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import AddItem from './AddItem'
-import List from './List';
+import List from './ListItem';
 import Footer from './Footer';
-import '../assets/css/app.css';
-import '../assets/css/main.css';
+import '../assets/style/app.css';
+import '../assets/style/main.css';
 
 class App extends Component {
 

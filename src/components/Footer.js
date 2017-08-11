@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Heart from './Heart';
-import '../assets/css/footer.css';
+import '../assets/style/footer.css';
 
 class Footer extends Component {
 
