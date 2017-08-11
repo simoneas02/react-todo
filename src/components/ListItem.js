@@ -26,6 +26,18 @@ class ListItem extends Component {
 
   render() {
 
+    const customStyle = {
+        save: {
+            backgroundColor: '#98f442'
+        },
+        edit: {
+            backgroundColor: '#fcbc3c'
+        },
+        remove: {
+            backgroundColor: '#fc3c4f'
+        }
+    };
+
     const itemList = this.props.data.map((item)  => {
       
       if(item.isEditable) {
@@ -40,7 +52,9 @@ class ListItem extends Component {
 
             <Button
               onClick = {() => this.saveItem(item.id)}
+              customStyle={customStyle.save}
               icon = {iconSave}>
+              SAVE
             </Button>
           </li>
 
@@ -58,12 +72,16 @@ class ListItem extends Component {
             <div>
               <Button
               onClick = {() => this.removeItem(item.id)}
+              customStyle={customStyle.remove}
               icon = {iconDelete}>
+              DELETE
             </Button>
 
             <Button
               onClick = {() => this.editItem(item.id)}
+              customStyle={customStyle.edit}
               icon = {iconEdit}>
+              EDIT
             </Button>
             </div>
           </li>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/style/button.css';
 
-const Button = ({onClick, isActive, icon}) => {
+const Button = ({onClick, children, isActive, icon, customStyle}) => {
 
   let stateClass;
 
@@ -18,7 +18,8 @@ const Button = ({onClick, isActive, icon}) => {
 
 
   return (
-    <button className={`btn ${stateClass}`} onClick={onClick}>
+    <button className={`btn ${stateClass}`} style={customStyle} onClick={onClick}>
+      {children}
       {iconElement}
     </button>
   );

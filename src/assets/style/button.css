@@ -1,5 +1,5 @@
 .btn {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 400;
 
     display: inline-flex;
@@ -12,13 +12,12 @@
     color: #fff;
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 3px;
-    background-color: var(--secondary-color);
 }
 
 .btn:hover {
     cursor: pointer;
 
-    background: #450ba2;
+    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,.1));
 }
 
 .btn:active {
@@ -42,5 +41,5 @@
 .btn__icon {
     width: 15px;
 
-    background: var(--secondary-color);
+    padding-left: 5px;
 }

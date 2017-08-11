@@ -4,6 +4,19 @@ import iconAdd from '../assets/icons/icon-add.svg';
 import '../assets/style/add-item.css';
 
 class AddItem extends Component {
+     constructor() {
+        super();
+
+        this.state = {
+            isActive: false
+        };
+    }
+
+    validActive() {
+        this.refs.text.value
+        ? this.setState({isActive: true})
+        : this.setState({isActive: false});
+    }
 
     addItem() {
     const newText = this.refs.text;
@@ -25,13 +38,28 @@ class AddItem extends Component {
 
   render() {
 
+     const customStyle = {
+          add: {
+              backgroundColor: '#98f442'
+          }
+     }
+
     return (
 
         <div className = 'add-item'>
-            <input className = 'add-item__input' type = "text" ref="text"/>
+            <input
+                ref = 'text'
+                className = 'add-item__input' 
+                type = 'text'
+                placeholder = 'What you need add?'
+                onChange={() => this.validActive()}
+            />
+
             <Button
-              onClick = {() => this.addItem()}
-              icon = {iconAdd}>
+                onClick = {() => this.addItem()}
+                customStyle={customStyle.add}
+                icon = {iconAdd}>
+                ADD
             </Button>
         </div>
 
