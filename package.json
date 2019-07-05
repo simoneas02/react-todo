@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@kadira/storybook": "2.35.3",
-    "@storybook/react": "^3.0.0-rc",
+    "@storybook/react": "3.4.12",
     "react-scripts": "1.0.7"
   },
   "scripts": {
