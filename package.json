@@ -6,7 +6,7 @@
     "immutability-helper": "2.9.1",
     "react": "15.6.2",
     "react-dom": "15.6.2",
-    "react-github-corner": "0.3.0",
+    "react-github-corner": "2.3.0",
     "redux": "3.7.2"
   },
   "devDependencies": {
