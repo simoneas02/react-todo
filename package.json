@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "immutability-helper": "2.9.1",
+    "immutability-helper": "3.0.1",
     "react": "15.6.2",
     "react-dom": "15.6.2",
     "react-github-corner": "0.3.0",
